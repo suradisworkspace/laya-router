@@ -4,6 +4,7 @@ import { createHash } from "node:crypto";
 import { writeFileSync } from "node:fs";
 import {
   TIERS,
+  THRESHOLDS,
   tierOf,
   idOf,
   availableTiers,
@@ -221,7 +222,9 @@ export async function startProxy({ upstreamURL = ANTHROPIC_BASE_URL, route = ask
             const key = conversationKey(body);
             const state = stateFor(key);
             // What the prompt cache was built on, which is what a downgrade would discard.
-            const current = state.tier ?? "opus";
+            // A fresh conversation has no cache yet, so its assumed baseline is the tier
+            // policy itself calls safest under uncertainty, not the priciest one.
+            const current = state.tier ?? THRESHOLDS.uncertainCeiling;
             const prompt = newTurnPrompt(body);
             const explaining = prompt?.includes("<laya-explain>");
             let fresh = null;
