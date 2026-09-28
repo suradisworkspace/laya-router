@@ -5,17 +5,16 @@
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PLACEHOLDER/laya-router.git"
+    "url": "git+https://github.com/suradisworkspace/laya-router.git"
   },
-  "homepage": "https://github.com/PLACEHOLDER/laya-router#readme",
-  "bugs": "https://github.com/PLACEHOLDER/laya-router/issues",
+  "homepage": "https://github.com/suradisworkspace/laya-router#readme",
+  "bugs": "https://github.com/suradisworkspace/laya-router/issues",
   "bin": {
     "laya-claude": "bin/laya-claude.mjs",
     "laya-explain": "bin/laya-explain.mjs"
   },
   "scripts": {
-    "test": "node --test \"test/**/*.test.mjs\"",
-    "prepublishOnly": "npm test"
+    "test": "node --test \"test/**/*.test.mjs\""
   },
   "files": [
     ".claude/skills",
@@ -31,10 +30,6 @@
   ],
   "engines": {
     "node": ">=20.12"
-  },
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org"
   },
   "license": "MIT"
 }

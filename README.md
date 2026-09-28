@@ -26,13 +26,13 @@ use and stops it when you exit, unless you're already running one (see [Configur
 ### 2. Install laya-router
 
 ```bash
-npm install -g laya-router
+npm install -g git+https://github.com/suradisworkspace/laya-router.git
 ```
 
 Or from a local checkout:
 
 ```bash
-git clone https://github.com/PLACEHOLDER/laya-router.git
+git clone https://github.com/suradisworkspace/laya-router.git
 cd laya-router
 npm install
 npm link
@@ -55,8 +55,6 @@ laya-claude -p "fix the failing test"
 For a local checkout, `npm link` installs the command. Without it, run `node bin/laya-claude.mjs`.
 
 ## Claude Code interface
-
-![Laya Router in the Claude Code model picker](docs/model-picker.png)
 
 `laya-claude` launches Claude Code with **Laya Router** selected in `/model`. Selecting another
 model pauses routing; selecting **Laya Router** resumes it.
