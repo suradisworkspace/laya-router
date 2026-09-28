@@ -1,0 +1,40 @@
+{
+  "name": "laya-router",
+  "version": "0.1.0",
+  "description": "Runs Claude Code and routes each turn to the cheapest sufficient model using a self-hosted Laya classifier",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PLACEHOLDER/laya-router.git"
+  },
+  "homepage": "https://github.com/PLACEHOLDER/laya-router#readme",
+  "bugs": "https://github.com/PLACEHOLDER/laya-router/issues",
+  "bin": {
+    "laya-claude": "bin/laya-claude.mjs",
+    "laya-explain": "bin/laya-explain.mjs"
+  },
+  "scripts": {
+    "test": "node --test \"test/**/*.test.mjs\"",
+    "prepublishOnly": "npm test"
+  },
+  "files": [
+    ".claude/skills",
+    "bin",
+    "src",
+    "README.md"
+  ],
+  "keywords": [
+    "claude",
+    "claude-code",
+    "model-routing",
+    "laya"
+  ],
+  "engines": {
+    "node": ">=20.12"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "license": "MIT"
+}
